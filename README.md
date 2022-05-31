@@ -1,11 +1,6 @@
 # terraform-to-jenkins
 Deploy and Configure Jenkins on AWS with Terraform
 
-## Step 0: Create a `dev-east.tfvars` file from the template
-```
-cp vars/template.tfvars vars/template.tfvars
-```
-
 ## Step 1: Initialize Terraform
 ```
 terraform init
@@ -13,12 +8,12 @@ terraform init
 
 ## Step 2: Plan Resources
 ```
-terraform plan -var-file="vars/template.tfvars"
+terraform plan -var-file="template.tfvars"
 ```
 
 ## Step 3: Apply Resources
 ```
-terraform apply -var-file="vars/template.tfvars"
+terraform apply -var-file="template.tfvars"
 ```
 
 ## Step 4: SSH to instance to get the admin password
